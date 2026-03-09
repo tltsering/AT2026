@@ -7,8 +7,8 @@ import "./globals.css";
 
 const font = Lexend_Deca({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "AtomHacks XI",
-  description: "Bronx Science's 11th Annual Hackathon",
+  title: "AtomHacks XII",
+  description: "Bronx Science's 12th Annual Hackathon",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

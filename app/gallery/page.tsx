@@ -4,6 +4,16 @@ import Image from "next/image";
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import NavBar from "../components/nav/NavBar";
+
+const photos_2025 = [
+  "DZ2025(1).jpg",
+  "DZ2025.jpg",
+  "RH2025(1).jpg",
+  "RH2025.png",
+  "YS2026(1).jpg",
+  "YS2026.jpg",
+];
+
 const photos_2024 = [
   "_DSC0860.JPG",
   "_DSC0883.JPG",
@@ -79,7 +89,10 @@ const photos_2019 = [
   "_DSC3836.JPG",
   "_DSC4026.JPG",
   "_DSC4055.JPG",
+  "_DSC4087.JPG",
+  "_DSC4105.JPG",
   "_DSC4152.JPG",
+  "_DSC4408.JPG",
 ];
 
 export default function Gallery() {
@@ -130,6 +143,23 @@ export default function Gallery() {
               GALLERY
             </span>
           </div>
+          <h1 className="mb-3 inline-block border-b-4 border-yellow-500 text-4xl">2025</h1>
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {photos_2025.map((photo: string, i: number) => (
+                <Image
+                  className="hover:border-box hover:outline-3 outline-solid box-border cursor-pointer rounded-xl outline-green-500 transition duration-200 hover:outline"
+                  src={`/gallery/2025/${photo}`}
+                  width={620}
+                  height={200}
+                  key={i}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  alt={""}
+                  onClick={() => setSelectedImage(`/gallery/2025/${photo}`)}
+                />
+              ))}
+            </div>
+          </div>
           <h1 className="mb-3 inline-block border-b-4 border-yellow-500 text-4xl">2024</h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -159,7 +189,7 @@ export default function Gallery() {
                   key={i}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   alt={""}
-                  onClick={() => setSelectedImage(`/gallery/2022/${photo}`)}
+                  onClick={() => setSelectedImage(`/gallery/2023/${photo}`)}
                 />
               ))}
             </div>

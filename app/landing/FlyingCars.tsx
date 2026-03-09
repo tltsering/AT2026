@@ -2,12 +2,12 @@
 "use client";
 
 import { useEffect, useState, useRef, PropsWithChildren } from "react";
-import flyingCarOne from "@/public/cars/flyingCar1.svg";
-import flyingCarTwo from "@/public/cars/flyingCar2.svg";
-import flyingCarThree from "@/public/cars/flyingCar3.svg";
+import starOne from "@/public/ATstars/star1.png";
+import starTwo from "@/public/ATstars/star2.png";
+import starThree from "@/public/ATstars/star3.png";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 function WidthSize() {
   const hasWindow = typeof window !== "undefined";
@@ -34,7 +34,7 @@ function WidthSize() {
 }
 
 type Props = {
-  src: string;
+  src: StaticImageData;
   speed: number;
   opposite?: boolean;
   hover: number[][];
@@ -109,7 +109,7 @@ function FlyCar(props: PropsWithChildren<Props>) {
           {props.hover.map((hoverMargin: number[], index) => (
             <svg
               key={index}
-              className="mt-1 h-[auto] w-[2rem] fill-[#5ccbe5]"
+              className="mt-1 h-[auto] w-[2rem] fill-none"
               viewBox="0 0 40 12"
               style={{
                 marginLeft: hoverMargin[0],
@@ -129,10 +129,10 @@ function FlyCar(props: PropsWithChildren<Props>) {
 export default function flyingCars() {
   return (
     <div className="viewport-width absolute h-[32rem] overflow-hidden">
-      <FlyCar src={flyingCarOne} speed={16} hover={[[25, 5], [100]]} />
-      <FlyCar src={flyingCarThree} speed={18} hover={[[50], [50]]} />
+      <FlyCar src={starOne} speed={16} hover={[[25, 5], [100]]} />
+      <FlyCar src={starThree} speed={18} hover={[[50], [50]]} />
       <FlyCar
-        src={flyingCarTwo}
+        src={starTwo}
         speed={14}
         hover={[
           [9, 3],
