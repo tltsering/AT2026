@@ -29,22 +29,22 @@ export default function Hero() {
           className="relative bottom-10 text-center underline underline-offset-8"
           style={{ textDecorationColor: colorString }}
         >
-          AtomHacks <span style={{ color: colorString }}>XI</span>
+          AtomHacks <span style={{ color: colorString }}>XII</span>
         </h1>
         <h2 className="relative bottom-4 text-center">
           Bronx Science&apos;s{" "}
           <span style={{ color: colorString }}>
-            11<sup>th</sup>
+            12<sup>th</sup>
           </span>{" "}
           Annual Hackathon
         </h2>
         <h2 className="relative bottom-4 flex flex-col text-center">
           <span style={{ color: colorString }}>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSderb4FIxzqbje5I5xpSoxYkHCSbj6YWP28ZavLwWYUnTfe5A/viewform?usp=dialog">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScXECYZFQf_Yh8hGwsCY3VnCN-rpgzmCXTTo8f2N4vSfFO3SQ/viewform?usp=dialog">
               Registration Link
             </a>
           </span>
-          <span style={{ color: colorString }}>04/26/25</span>
+          <span style={{ color: colorString }}>03/28/26</span>
         </h2>
       </div>
     </div>
